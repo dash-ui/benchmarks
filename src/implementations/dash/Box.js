@@ -1,6 +1,6 @@
 import React from "react";
 import View from "./View";
-import { styles as dashStyles } from "@dash-ui/styles";
+import { styles } from "@dash-ui/styles";
 
 const Box = ({
   color,
@@ -11,8 +11,8 @@ const Box = ({
 }) => (
   <View
     {...other}
-    className={styles({
-      [`color${color}`]: true,
+    className={style({
+      ["color" + color]: true,
       [layout]: true,
       fixed,
       outer,
@@ -20,7 +20,7 @@ const Box = ({
   />
 );
 
-const styles = dashStyles({
+const style = styles({
   outer: {
     alignSelf: "flex-start",
     padding: 4,

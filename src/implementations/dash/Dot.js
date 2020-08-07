@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { styles as dashStyles, compileStyles } from "@dash-ui/styles";
+import { styles, compileStyles } from "@dash-ui/styles";
 
 const Dot = ({ size, x, y, children, color }) => (
   <div
@@ -15,7 +15,7 @@ const Dot = ({ size, x, y, children, color }) => (
   </div>
 );
 
-const styles = dashStyles.one({
+const styles = styles.one({
   position: "absolute",
   cursor: "pointer",
   width: 0,
@@ -42,7 +42,7 @@ const dynamicStyle = (styleCallback) => {
     return result;
   };
 
-  return Object.assign((value) => dashStyles.cls(css(value)), {
+  return Object.assign((value) => styles.cls(css(value)), {
     css,
   });
 };

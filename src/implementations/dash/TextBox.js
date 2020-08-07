@@ -1,20 +1,17 @@
 import React from "react";
-import { styles as dashStyles } from "@dash-ui/styles";
+import { styles } from "@dash-ui/styles";
 import Text from "./Text";
 
 const TextBox = ({ color, outer = false, ...other }) => (
-  <Text {...other} className={styles({ [`color${color}`]: true, outer })} />
+  <Text {...other} className={style({ ["color" + color]: true, outer })} />
 );
 
-const styles = dashStyles({
+const style = styles({
   default: {
     color: "white",
   },
   outer: {
     fontStyle: "italic",
-  },
-  row: {
-    flexDirection: "row",
   },
   color0: {
     color: "#14171A",
