@@ -1097,10 +1097,10 @@
   dependencies:
     "@dash-ui/mq" "^0.4.0"
 
-"@dash-ui/styles@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@dash-ui/styles/-/styles-0.8.3.tgz#bd39d343083957f7df4edb6686e0ebaa5667d84b"
-  integrity sha512-9hy3isa6ny5cH48SOScCQjOHx2sB5awo9FPPgfoPU9c+O7xKmsTKTxwioU16wHetLmJ1+oaMUBRSZ/6r9T2Gaw==
+"@dash-ui/styles@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@dash-ui/styles/-/styles-0.8.4.tgz#ee7cc3c4e40795eca7d3028324bbd3e7a81f9e7d"
+  integrity sha512-M2Bxrudfhce4POqCukz/ZTZ7yid/Rpg7qmPYo3aB4lWMRLCsdTrPjV679zbdK/ScbInURsqckVQvs4PCZ0lTDw==
   dependencies:
     "@dash-ui/stylis" "^1.0.5"
     "@dash-ui/unitless" "^2.0.0"

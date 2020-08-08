@@ -5,7 +5,7 @@ import { styles, compileStyles } from "@dash-ui/styles";
 const Dot = ({ size, x, y, children, color }) => (
   <div
     className={clsx(
-      styles(),
+      style(),
       borderStyles(size),
       marginStyles([x, y]),
       colorStyles(color)
@@ -15,7 +15,7 @@ const Dot = ({ size, x, y, children, color }) => (
   </div>
 );
 
-const styles = styles.one({
+const style = styles.one({
   position: "absolute",
   cursor: "pointer",
   width: 0,
@@ -26,39 +26,18 @@ const styles = styles.one({
   transform: "translate(50%, 50%)",
 });
 
-const dynamicStyle = (styleCallback) => {
-  const oneCache = new Map();
-
-  const css = (value) => {
-    if (value === undefined) return "";
-    const key = typeof value === "object" ? JSON.stringify(value) : value;
-    let result = oneCache.get(key);
-
-    if (!result) {
-      result = compileStyles(styleCallback(value));
-      oneCache.set(key, result);
-    }
-
-    return result;
-  };
-
-  return Object.assign((value) => styles.cls(css(value)), {
-    css,
-  });
-};
-
-const borderStyles = dynamicStyle((size) => ({
+const borderStyles = styles.lazy((size) => ({
   borderRightWidth: size / 2,
   borderBottomWidth: size / 2,
   borderLeftWidth: size / 2,
 }));
 
-const marginStyles = dynamicStyle(([x, y]) => ({
+const marginStyles = styles.lazy(([x, y]) => ({
   marginLeft: x,
   marginTop: y,
 }));
 
-const colorStyles = dynamicStyle((color) => ({
+const colorStyles = styles.lazy((color) => ({
   borderBottomColor: color,
 }));
 
