@@ -4,7 +4,7 @@ To run the benchmarks:
 
 ```
 yarn build
-open ./packages/benchmarks/dist/index.html
+open dist/index.html
 ```
 
 ## Notes
