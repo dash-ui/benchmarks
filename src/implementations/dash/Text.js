@@ -7,7 +7,7 @@ class Text extends React.Component {
     return (
       <span
         {...this.props}
-        className={clsx(this.props.className, textStyle())}
+        className={`${this.props.className} ${textStyle()}`}
       />
     );
   }

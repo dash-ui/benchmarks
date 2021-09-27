@@ -3,7 +3,7 @@ import { styles } from "@dash-ui/styles";
 import Text from "./Text";
 
 const TextBox = ({ color, outer = false, ...other }) => (
-  <Text {...other} className={style({ ["color" + color]: true, outer })} />
+  <Text {...other} className={style("color" + color, outer && "outer")} />
 );
 
 const style = styles({

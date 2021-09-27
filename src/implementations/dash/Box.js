@@ -11,12 +11,12 @@ const Box = ({
 }) => (
   <View
     {...other}
-    className={style({
-      ["color" + color]: true,
-      [layout]: true,
-      fixed,
-      outer,
-    })}
+    className={style(
+      "color" + color,
+      layout,
+      fixed && "fixed",
+      outer && "outer"
+    )}
   />
 );
 

@@ -7,7 +7,7 @@ class View extends React.Component {
     return (
       <div
         {...this.props}
-        className={clsx(this.props.className, viewStyle())}
+        className={`${this.props.className} ${viewStyle()}`}
       />
     );
   }

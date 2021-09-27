@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { css } from "emotion";
+import { css } from "@emotion/css";
 
 const Dot = ({ size, x, y, children, color }) => (
   <div
